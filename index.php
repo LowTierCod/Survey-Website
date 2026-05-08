@@ -1,3 +1,11 @@
+<? 
+    require_once "BackEnd/DataBaseConn.php";
+
+    if($pdo){
+        echo "Есть связь!";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
