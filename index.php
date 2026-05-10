@@ -1,4 +1,4 @@
-<? 
+<?php 
     require_once "BackEnd/DataBaseConn.php";
 
     require_once 'StyleImportFile.php'; 
