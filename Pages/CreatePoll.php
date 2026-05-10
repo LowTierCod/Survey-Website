@@ -65,5 +65,6 @@
     };
 </script>
 
+<?php include_once $footerFileImp; ?>
 </body>
 </html>
