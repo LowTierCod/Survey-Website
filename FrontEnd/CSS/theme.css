@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 :root {
     /* Цветовая палитра */
     --color-bg: #FFFFFF;
@@ -28,6 +32,7 @@ html, body {
     width: 100%;
     min-height: 100vh;
     box-sizing: border-box;
+
 
     /* Используем переменные темы */
     font-family: var(--font-main);

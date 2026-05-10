@@ -11,23 +11,37 @@
 
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Статистика</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Статистика</title>
+    </head>
+    <body>
 
-<?php 
-    include_once $burgerFileImp; 
-    include_once $headerFileImp; 
-?>
+    <?php 
+        include_once $burgerFileImp; 
+        include_once $headerFileImp; 
+    ?>
 
-<main class="main-container">
-    <h1>Статистика готова!</h1>
-    <!-- Твоё дерево элементов -->
-</main>
+    <!-- Блок 1: Основной фоновой контейнер -->
+    <main class="stats-page-wrapper">
+        
+        <!-- Блок 2: Заголовок по центру -->
+        <div class="stats-title-container">
+            <h1 class="stats-main-title">Статистика</h1>
+        </div>
 
-<?php include_once $footerFileImp; ?>
+        <div class="polls-list-container">
+            <a href="#" class="poll-entry-field">
+                <span class="poll-name">Любимый язык программирования</span>
+            </a>
+            <a href="#" class="poll-entry-field">
+                <span class="poll-name">Выбор фреймворка 2026</span>
+            </a>
+        </div>
 
-</body>
+    </main>
+
+    <?php include_once $footerFileImp; ?>
+
+    </body>
 </html>

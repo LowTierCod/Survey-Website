@@ -9,4 +9,7 @@
             <!-- Здесь может быть фото или иконка -->
         </a>
     </div>
+    
 </footer>
+<!-- Подключаем общий JS -->
+<script src="/FrontEnd/JS/burger.js"></script>

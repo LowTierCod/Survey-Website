@@ -1,0 +1,66 @@
+main{
+    flex: 1 0 auto;
+    height: 80vh;
+}
+
+/* Блок 1: Основной контейнер с контуром */
+.stats-page-wrapper {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border); 
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Блок 2: Заголовок с нижней границей */
+.stats-title-container {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px; /* Отступ до линии */
+    border-bottom: 2px solid var(--color-border); /* Линия только снизу */
+}
+
+.stats-main-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Блок 3: Контейнер для полей */
+.polls-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Черные поля без лишних элементов */
+.poll-entry-field {
+    display: flex;
+    justify-content: left; /* Ставим текст слева */
+    align-items: center;
+    
+    background-color: var(--color-primary); 
+    color: #FFFFFF;
+    
+    padding: 24px 32px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.poll-entry-field:hover {
+    background-color: #333333;
+    transform: scale(1.01); /* Легкое увеличение вместо сдвига */
+}
+
+.poll-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Удалили стили для .poll-link-arrow, так как стрелки больше не нужны */
