@@ -16,52 +16,51 @@
     include_once $burgerFileImp; 
     include_once $headerFileImp; 
 ?>
-
-<!-- Блок 1: Основной фоновой блок -->
 <main class="create-poll-wrapper">
-    
     <div class="create-title-container">
         <h1 class="create-main-title">Новый опрос</h1>
     </div>
 
     <form action="/Core/Handlers/SavePoll.php" method="POST">
-        <!-- Блок 2: Инпут для главного вопроса -->
+        <!-- Блок 2: Два инпута для вопроса (Основной и Дополнительный) -->
         <section class="question-section">
-            <input type="text" name="poll_title" class="main-input-dark" placeholder="Введите ваш вопрос..." required>
+            <input type="text" name="poll_title" class="main-input-dark" placeholder="Заголовок опроса (основной вопрос)" required>
+            <input type="text" name="poll_subtitle" class="main-input-dark subtitle" placeholder="Дополнительное описание или подвопрос">
         </section>
 
         <!-- Блок 3: Конструктор вариантов -->
         <section class="options-constructor">
+            <p class="section-label">Варианты ответов:</p>
             <div class="options-list" id="optionsList">
-                <!-- Подблок 1: Инпут для варианта ответа -->
+                <!-- Начальное поле ответа -->
                 <div class="option-item">
-                    <input type="text" name="options[]" class="option-input-dark" placeholder="Вариант ответа">
+                    <input type="text" name="options[]" class="option-input-dark" placeholder="Текст ответа" required>
+                    <button type="button" class="btn-remove" onclick="this.parentElement.remove()">×</button>
                 </div>
             </div>
 
-            <!-- Подблок 2: Квадратная кнопка "+" -->
+            <!-- Кнопка добавления с пояснением -->
             <div class="add-option-container">
                 <button type="button" class="btn-add-square" id="addOptionBtn">+</button>
+                <span class="add-label">Добавить вариант ответа</span>
             </div>
         </section>
 
-        <!-- Финальная кнопка (вне блоков, для отправки) -->
         <div class="submit-section">
-            <button type="submit" class="btn-publish">Опубликовать</button>
+            <button type="submit" class="btn-publish">Опубликовать опрос</button>
         </div>
     </form>
-
 </main>
 
-<?php include_once $footerFileImp; ?>
-
-<!-- Маленький скрипт для работы кнопки "+" (без него никуда) -->
 <script>
     document.getElementById('addOptionBtn').onclick = function() {
         const list = document.getElementById('optionsList');
         const newItem = document.createElement('div');
         newItem.className = 'option-item';
-        newItem.innerHTML = '<input type="text" name="options[]" class="option-input-dark" placeholder="Вариант ответа">';
+        newItem.innerHTML = `
+            <input type="text" name="options[]" class="option-input-dark" placeholder="Текст ответа">
+            <button type="button" class="btn-remove" onclick="this.parentElement.remove()">×</button>
+        `;
         list.appendChild(newItem);
     };
 </script>

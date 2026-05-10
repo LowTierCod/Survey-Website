@@ -48,8 +48,7 @@
 
 /* Квадратная кнопка "+" */
 .add-option-container {
-    display: flex;
-    justify-content: center;
+    
     margin-top: 20px;
 }
 
@@ -87,4 +86,61 @@
     font-weight: bold;
     border-radius: var(--radius-md);
     cursor: pointer;
+}
+
+/* Блок 2: Стили для двух инпутов вопроса */
+.question-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.main-input-dark.subtitle {
+    background-color: var(--color-surface); /* Подвопрос чуть светлее */
+    color: var(--color-text-main);
+    border: 1px solid var(--color-border);
+    font-size: 1rem;
+}
+
+/* Блок 3: Стили для вариантов с кнопкой удаления */
+.option-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-remove {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Кнопка "+" и подпись */
+.add-option-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.add-label {
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+.section-label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
 }
