@@ -1,0 +1,20 @@
+:root {
+    /* Цветовая палитра */
+    --color-bg: #FFFFFF;
+    --color-surface: #F9F9FB;    /* Для хедеров карточек и второстепенных зон */
+    --color-primary: #1A1A1A;    /* Твой основной темный для функционала */
+    --color-text-main: #1A1A1A;
+    --color-text-muted: #6B7280;
+    --color-border: #E5E5E5;
+    
+    /* Шрифты */
+    --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+    
+    /* Геометрия */
+    --radius-lg: 20px;           /* Для больших карточек */
+    --radius-md: 12px;           /* Для полей ответов и кнопок */
+    --gap-main: 24px;            /* Стандартный отступ */
+    
+    /* Тени */
+    --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.05);
+}

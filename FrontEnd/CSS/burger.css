@@ -1,0 +1,150 @@
+/* Фоновая подложка (затемнение) */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px); /* Легкое размытие, чтобы убрать инородность */
+    display: none;
+    z-index: 999;
+}
+
+.menu-overlay.active {
+    display: block;
+}
+
+/* Сама панель меню */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 300px;
+    height: 100%;
+    background-color: var(--color-bg);
+    z-index: 1000;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu.active {
+    left: 0;
+}
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 40px 20px;
+}
+
+/* Заголовок внутри меню, чтобы не было пусто */
+.menu-content::before {
+    content: "Навигация";
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Ссылки-функционал (Темные блоки) */
+.menu-link {
+    display: block;
+    margin-bottom: 12px;
+    padding: 18px;
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.menu-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Кнопка закрытия внизу */
+.close-menu {
+    margin-top: auto;
+    align-self: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.cross {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.cross:hover { opacity: 1; }
+
+.cross::before, .cross::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+}
+.cross::before { transform: rotate(45deg); }
+.cross::after { transform: rotate(-45deg); }
+
+/* Затемнение фона сайта при открытом меню */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 999;
+}
+
+.menu-overlay.active {
+    display: block;
+}
+
+/* Добавь это в CSS для улучшения визуала */
+.menu-content::before {
+    content: "Управление";
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.menu-link {
+    text-align: left; 
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.verion{
+    font-size: 0.9rem;
+    color: var(--color-text-muted)
+}

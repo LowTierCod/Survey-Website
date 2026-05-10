@@ -1,0 +1,252 @@
+/* Общие настройки для html и body */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    /* Используем переменные темы */
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* HEADER */
+.main-header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--gap-main);
+    background-color: var(--color-primary); /* Темный фон по твоему коду */
+    border-bottom: 1px solid var(--color-border);
+}
+
+.burger-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+}
+
+.burger-menu .bar {
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-bg); /* Белые полоски на темном фоне */
+    border-radius: 2px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-surface);
+    border: 2px solid var(--color-bg); /* Светлая рамка на темном хедере */
+    border-radius: 50%;
+    background-image: url('placeholder-user.png');
+    background-size: cover;
+    cursor: pointer;
+}
+
+/* POLL SECTION */
+.poll-container {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.poll-card {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.poll-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: var(--gap-main);
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.poll-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin: 0 0 4px 0;
+}
+
+.author-name {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+.poll-date {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.poll-content {
+    padding: var(--gap-main);
+}
+
+.question-text {
+    font-size: 1.1rem;
+    margin-bottom: var(--gap-main);
+    color: var(--color-text-main);
+}
+
+/* OPTIONS */
+.option-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 15px;
+}
+
+.option-bar {
+    flex: 1;
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    padding: 14px var(--gap-main);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.option-bar:hover {
+    opacity: 0.9; /* Универсальный способ подсветить темный элемент */
+}
+
+.option-text {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.option-percentage {
+    width: 50px;
+    font-weight: 700;
+    color: var(--color-text-main);
+    text-align: right;
+}
+
+/* Контейнер для кнопок внизу 3-го блока */
+.poll-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border); /* Отделяем чертой от опроса */
+}
+
+.action-btn {
+    background: none;
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
+    padding: 8px 16px;
+    color: var(--color-text-muted);
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+/* Эффект при наведении */
+.action-btn:hover {
+    background-color: var(--color-surface);
+    color: var(--color-text-main);
+    border-color: var(--color-border);
+}
+
+/* Иконки можно сделать чуть прозрачнее */
+.action-btn .icon {
+    font-size: 1rem;
+    filter: grayscale(1);
+    opacity: 0.7;
+}
+
+.action-btn:hover .icon {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+
+
+.main-footer {
+    width: 100%;
+    background-color: var(--color-primary);
+    border-top: 1px solid var(--color-border);
+    padding: 20px 0;
+    margin-top: 40px; /* Отступ от контента */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* Твои 30% отступов от краев */
+    padding: 0 30%; 
+    max-width: 100%;
+}
+
+/* Кнопка статистики */
+.footer-btn {
+    background: var(--color-primary);
+    color: var(--color-bg);
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 10px 20px;
+    font-family: var(--font-main);
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.footer-btn:hover {
+    opacity: 0.9;
+}
+
+/* Круглая ссылка на кабинет */
+.footer-avatar {
+    width: 45px;
+    height: 45px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    display: block;
+    background-image: url('placeholder-user.png');
+    background-size: cover;
+    border: 2px solid var(--color-border);
+    transition: transform 0.2s;
+}
+
+.footer-avatar:hover {
+    transform: scale(1.05); /* Легкий эффект при наведении */
+}
+
+/* Адаптивность: на мобилках 30% — это слишком много, уменьшим */
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 0 10%;
+    }
+}
