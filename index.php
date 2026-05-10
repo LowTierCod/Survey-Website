@@ -1,46 +1,20 @@
 <? 
     require_once "BackEnd/DataBaseConn.php";
+    require_once "StyleImportFile.php"
 ?>
 
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Monolith Design</title>
-    <link rel="stylesheet" href="FrontEnd/CSS/style.css">
-    <link rel="stylesheet" href="FrontEnd/CSS/theme.css">
-    <link rel="stylesheet" href="FrontEnd/CSS/burger.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Survey-site/Сайт опросники</title>
+    <?php include_once $headOfLinksImp; ?>
 </head>
 <body>
-    <nav class="mobile-menu" id="mobileMenu">
-        <div class="menu-content">
-            <ul class="menu-list">
-                <li><a href="/profile" class="menu-link">Личный кабинет</a></li>
-                <li><a href="/stats" class="menu-link">Статистика</a></li>
-                <li><a href="/popular" class="menu-link">Самые популярные</a></li>
-                <li><a href="/settings" class="menu-link">Настройки</a></li>
-            </ul>
-            <div class="verion">v 1.0.0 by Admin</div>
-            <!-- Кнопка закрытия (крестик) внизу -->
-            <button class="close-menu" id="closeMenu" aria-label="Закрыть меню">
-                <div class="cross"></div>
-            </button>
-           
-        </div>
-    </nav>
-
-    <header class="main-header">
-        <button class="burger-menu" aria-label="Открыть меню">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-        
-        <div class="user-profile">
-            <div class="avatar"></div>
-        </div>
-    </header>
+    <?php 
+        include_once $burgerFileImp; 
+        include_once $headerFileImp; 
+    ?>
 
     <section class="poll-container">
         <article class="poll-card">
@@ -99,19 +73,7 @@
         </article>
     </section>
     
-    <footer class="main-footer">
-        <div class="footer-content">
-            <!-- Левая кнопка -->
-            <button class="footer-btn">
-                <span class="icon">📈</span> Статистика
-            </button>
-
-            <!-- Правая кнопка-аватар -->
-            <a href="/profile" class="footer-avatar" title="Личный кабинет">
-                <!-- Здесь может быть фото или иконка -->
-            </a>
-        </div>
-    </footer>
+    <?php include_once $footerFileImp; ?>
 </body>
 
 <script>
