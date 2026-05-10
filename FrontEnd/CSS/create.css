@@ -1,0 +1,90 @@
+/* Блок 1: Фон с контуром */
+.create-poll-wrapper {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.create-title-container {
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 15px;
+}
+
+/* Блок 2: Главный инпут (Черная плашка) */
+.main-input-dark {
+    width: 100%;
+    background-color: var(--color-primary); /* #1A1A1A */
+    color: #FFFFFF;
+    border: none;
+    padding: 20px;
+    font-size: 1.2rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+/* Блок 3: Секция вариантов */
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.option-input-dark {
+    width: 100%;
+    background-color: #333333; /* Чуть светлее главного вопроса */
+    color: #FFFFFF;
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 15px 20px;
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+}
+
+/* Квадратная кнопка "+" */
+.add-option-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-add-square {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.btn-add-square:hover {
+    transform: scale(1.1);
+    background-color: #000000;
+}
+
+/* Кнопка публикации */
+.submit-section {
+    margin-top: 40px;
+    text-align: right;
+}
+
+.btn-publish {
+    background-color: #4ade80; /* Зеленый акцент на публикацию */
+    color: #1A1A1A;
+    border: none;
+    padding: 15px 30px;
+    font-weight: bold;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+}

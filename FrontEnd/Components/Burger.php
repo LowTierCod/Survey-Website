@@ -1,10 +1,10 @@
 <nav class="mobile-menu" id="mobileMenu">
     <div class="menu-content">
         <ul class="menu-list">
-            <li><a href="/Pages/profile" class="menu-link">Личный кабинет</a></li>
+            <li><a href="/Pages/Profile.php" class="menu-link">Личный кабинет</a></li>
             <li><a href="/Pages/Stats.php" class="menu-link">Статистика</a></li>
             <li><a href="/Pages/Popular.php" class="menu-link">Самые популярные</a></li>
-            <li><a href="/Pages/settings" class="menu-link">Настройки</a></li>
+            <li><a href="/Pages/Settings.php" class="menu-link">Настройки</a></li>
         </ul>
         <div class="verion">v 1.0.0 by Admin</div>
         <!-- Кнопка закрытия (крестик) внизу -->

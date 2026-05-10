@@ -1,0 +1,64 @@
+main{
+    height: 80vh;
+}
+
+.settings-page-wrapper {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.settings-title-container {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--color-border);
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.setting-text h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--color-text-main);
+}
+
+.setting-text p {
+    margin: 5px 0 0;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+/* Переключатель тем */
+.theme-switcher {
+    display: flex;
+    background-color: var(--color-surface);
+    padding: 5px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+}
+
+.theme-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+    background: transparent;
+    color: var(--color-text-muted);
+}
+
+.theme-btn.active {
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+}
