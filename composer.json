@@ -1,5 +1,5 @@
 {
-    "name": "my-poll-project",
+    
     "description": "Simple PHP Poll",
     "require": {
         "php": ">=8.0"
