@@ -2,10 +2,10 @@
     <div class="footer-content">
         <!-- Левая кнопка -->
         <button class="footer-btn">
-            <span class="icon">📈</span> Статистика
+            <a href="Pages/Stats.php"><span class="icon">📈</span> Статистика</a>
         </button>
         <!-- Правая кнопка-аватар -->
-        <a href="/profile" class="footer-avatar" title="Личный кабинет">
+        <a href="/Pages/Profile.php" class="footer-avatar" title="Личный кабинет">
             <!-- Здесь может быть фото или иконка -->
         </a>
     </div>
