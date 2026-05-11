@@ -180,7 +180,7 @@
     background-color: var(--color-primary);
     border-top: 1px solid var(--color-border);
     padding: 20px 0;
-    margin-top: 40px; /* Отступ от контента */
+    margin-top: 20%; /* Отступ от контента */
 }
 
 .footer-content {

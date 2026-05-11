@@ -6,6 +6,6 @@
     </button>
     
     <div class="user-profile">
-        <div class="avatar"></div>
+        <a href="/Pages/Profile.php"> <div class="avatar"></div> </a>
     </div>
 </header>
