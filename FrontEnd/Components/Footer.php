@@ -2,7 +2,7 @@
     <div class="footer-content">
         <!-- Левая кнопка -->
         <button class="footer-btn">
-            <a href="Pages/Stats.php"><span class="icon">📈</span> Статистика</a>
+            <a href="/Pages/Stats.php"><span class="icon">📈</span> Статистика</a>
         </button>
         <!-- Правая кнопка-аватар -->
         <a href="/Pages/Profile.php" class="footer-avatar" title="Личный кабинет">
